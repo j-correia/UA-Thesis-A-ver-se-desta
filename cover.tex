@@ -1,0 +1,233 @@
+%!TEX encoding = UTF-8 Unicode
+
+%% Thesis cover pages
+%%
+%% Based on the example.tex file provided by Tomás Oliveira e Silva
+%%
+%% Modified by João Paulo Barraca <jpbarraca@ua.pt>
+%% Modified by Filipe Manco <filipe.manco@ua.pt>
+
+% Remove 'coverdepname' parameter to remove department name from cover pages
+% Add 'final' parameter to remove "DOCUMENTO PROVISÓRIO" from cover page
+%\documentclass[11pt,twoside,a4paper]{report}
+\documentclass[11pt,twoside,a4paper,final]{report}
+
+%%% This file is a template for the cover of your
+%%%  thesis.
+%%% Lines like this one, starting with %%% , are
+%%%  instructions. Search them to know where and
+%%%  how to edit this file. After editing the
+%%%  document you can delete them.
+%%% Items marked with OPTIONAL can be removed.
+%%% Most of the lines you will have to change
+%%%  already have examples to help you understand.
+%%% The complete list of options and commands can
+%%%  be found in uaThesisTemplate.sty
+
+
+%%% Select your area of study and department from
+%%%  the following lists and replace them in the
+%%%  \usepackage declaration ([area,department]).
+%%%
+%%% | area        |   | department |
+%%% ---------------   --------------
+%%% | arts        |   | dao        |
+%%% | sciences    |   | dbio       |
+%%% | education   |   | dcspt      |
+%%% | economy     |   | deca       |
+%%% | engineering |   | degeit     |
+%%% | humanities  |   | de         |
+%%% | health      |   | deti       |
+%%% |             |   | demac      |
+%%% |             |   | decivil    |
+%%% |             |   | dem        |
+%%% |             |   | dfis        |
+%%% |             |   | dlc        |
+%%% |             |   | dmat       |
+%%% |             |   | dq         |
+%%% |             |   | dcm        |
+%%% |             |   | dgeo        |
+%%% ---------------   --------------
+%% Import the UA thesis template
+\usepackage[engineering,deti]{uaThesisTemplate}
+
+
+%% Optional packages for utf8 encoding and T1 fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% For prettier pages
+\usepackage{lmodern}
+
+%% We will use english and portuguese
+\usepackage[english,portuguese]{babel}
+
+\usepackage{xspace}% used by \sigla
+
+%%% This package is only used to create a dummy
+%%%  text for the abstract. You can remove the
+%%%  following line in the final document.
+%\usepackage{blindtext}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%       DEFINE THESIS COVER FIELDS
+%%                  START
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Edit thesis year
+%% Thesis Year
+\ThesisYear{\the\year}
+
+
+%%% Uncomment one of the following options:
+%\DocumentTypeThesis
+%\DocumentTypeThesisProposal
+\DocumentTypeDissertation
+
+%%% Uncomment if you are a student of a MAP Doctoral program 
+%%% http://www.map.edu.pt/
+%%% | area                | identifier |
+%%% | Biology of Plants   | bioplant   |
+%%% | Computer Science    | i          |
+%%% | Physics             | fis        |
+%%% | Telecommunications  | tele       |
+
+%\MAPProgram{i}
+
+%%% Edit author's name
+%% Author's full name
+\Author{JOÃO MANUEL\\BOLA CORREIA}
+
+%%% Edit thesis title in Portuguese
+%% Thesis Mandatory Title in Portuguese
+\TitlePT{PROTÓTIPO DE TRANSMISSOR EM ARRAY}
+
+%%% OPTIONAL: you can write your thesis title in
+%%%  other languages. You can repeat the following
+%%%  line as many times as you want, or remove it
+%%%  if you only want the portuguese title.
+%% Optional Titles in additional languages.
+\TitleEN{PROTOTYPE OF AN ARRAY TRANSMITTER}
+
+%%% OPTIONAL: add a quotation if you like.
+%% Optional Quotation
+\Quote{\selectlanguage{english}It’s the job that’s never started as takes longest to finish}{J.R.R. Tolkien}
+
+%%% Edit your supervisor's information.
+%%%
+%%% \Supervisor{name}{category}
+%%%
+%%% name   : Supervisor's name
+%%% categoy: One of the following list
+%%%
+%%% | category               |
+%%% --------------------------
+%%% | catedrático            |
+%%% | catedrático convidado  |
+%%% | associado c/ agregação |
+%%% | associado              |
+%%% | auxiliar               |
+%%% | auxiliar convidado     |
+%%% --------------------------
+%% Supervisor information
+\Supervisor{Telmo Reis Cunha}{associado}
+
+%%% OPTIONAL: you can add a second supervisor.
+%%%
+%%% \SecondSupervisor{name}{category}
+%%%  {[preposition: (at, in, no, da)] department}
+%%%  {[preposition: (at, in, do, na)] school}
+%%%
+%%% name      : See above.
+%%% category  : See above.
+%%% department: Can be a department, faculty or
+%%%             other; Choose the preposition
+%%%             accordingly.
+%%% school    : University/Scholl name; Choose the
+%%%             preposition accordingly.
+%% Optional SecondSuperviser information
+\SecondSupervisor{Pedro Miguel da Silva Cabral}{auxiliar}{do Departamento de Eletrónica, Telecomunicações e Informática}{da Universidade de Aveiro}
+
+%%% Edit your degree information.
+%%%
+%%% \Degree{title}{name}
+%%%
+%%% title: Degree title (Mestre or Doutor)
+%%% name : Degree name
+%% Degree title and name
+\Degree{Mestre}{Engenharia de Eletrónica e Telecomunicações}
+
+%%% OPTIONAL: edit grant support texts where
+%%%  appropriate. Maximum two.
+%%%
+%%% \GrantText{grant1}{grant2}
+%% Optional Grant support texts
+%\GrantText{Texto Apoio financeiro do POCTI no âmbito do III Quadro Comunitário de Apoio.}
+          %{Texto Apoio financeiro da FCT e do FSE no âmbito do III Quadro Comunitário de Apoio.}
+
+%%% OPTIONAL: Add a dedication text.
+%% Optional Dedication text
+\Dedication{Dedico este trabalho ao meu avô, à minha namorada, à minha irmã, aos
+meus pais, às minhas avós, tios e restante família.}
+
+%%% OPTIONAL: Add an acknowledgement text
+%% Optional Acknowledgement text
+\Acknowledgements{Agradeço a todos os meus colegas, com especial atenção ao Vasco Fernandes e Leonardo "Leonel" Rodrigues, bem como a todos os que fizeram parte de
+grupos de trabalho e de estudo comigo. Agradeço todo o apoio da equipa docente
+da Universidade de Aveiro que esteve envolvida no meu percurso académico.}
+
+%%% Edit the keywords and abstract in Portuguese
+%%% Don't forget to remove the \blindtext[3]
+%%%  declaration.
+%%% Don't remove the \selectlanguage statement or you will end with incorrect hyphenation
+%% Mandatory Keywords and Abstract in Portuguese
+\Abstract{Palavras Chave}{Antena em Espiral, Elemento Transmissor de RF, Design de Hardware, Phase Shift Array, Transmissor em Array Wireless}
+         {Resumo}{\selectlanguage{portuguese}\paragraph{}No âmbito do estudo e teste de transmissores sem fios com base em múltiplos elementos radiantes, operando em matriz (usualmente denominados de transmissores em array), pretendeu-se neste trabalho desenvolver um elemento transmissor constituindo a unidade de base para a criação de transmissores em array com configurações arbitrárias. Tal unidade de base seria, posteriormente, replicada por várias unidades iguais que seriam, então, dispostas espacialmente da forma pretendida para formar um transmissor em array.
+         \paragraph{}A unidade de base recebe os sinais analógicos I e Q, à banda base, efetuando a modulação de uma portadora que recebe de um outro porto de entrada. O sinal modulado é pré-amplificado por um driver, sendo depois amplificado por um amplificador de potência, que entrega o sinal a uma antena produzida para o efeito. Atendendo a que o objetivo desta unidade é constituir a base para a criação de transmissores em array, com capacidade de beamsteering em múltiplas direções, foi concebida uma antena com diretividade reduzida e, também, com uma largura de banda elevada – tais requisitos conduziram ao projeto de uma antena em espiral. Para permitir que várias unidades deste módulo possam ter um controlo da direção principal de radiação conjunta, quando num transmissor em array, esta unidade de base possui um phase-shifter na entrada da portadora do modulador I/Q que permite variar a fase da portadora através da aplicação de um sinal de tensão de controlo, imposto externamente. Especificou-se, à partida, que este elemento de base deveria apresentar a possibilidade de transmitir sinais com largura de banda da ordem dos 100 MHz, centrados na frequência de 2.4 GHz, sendo capaz de radiar uma potência de pico da ordem dos 10 W.
+         \paragraph{}Apesar de o projeto e a construção desta unidade de base ter seguido as especificações dos seus vários elementos constituintes, verificaram-se problemas na operação do modulador I/Q que, no tempo disponível, não foram devidamente resolvidos (suspeitando-se de um problema na soldadura do referido modulador, sendo este um circuito integrado de dimensões muito reduzidas). No entanto, pelos testes efetuados, pensa-se que, a menos deste problema (que requer uma solução futura), os restantes blocos do protótipo desenvolvido estarão funcionais.}
+
+%%% OPTIONAL: you can write the keywords and
+%%%  abstract in other languages. You can repeat
+%%%  the following lines as many times as you want
+%%%  or remove them if you only want portuguese.
+%%% Don't remove the \selectlanguage statement or you will end with incorrect hyphenation.
+%%% You can modify the language to any other supported by Latex
+%% Optional Keywords and Abstract in additional languages.
+\Abstract{Keywords}{Hardware Design, Phase Shift Array, RF Transmitter Element, Spiral Antenna, Wireless Array Transmitter.}
+         {Abstract}{\selectlanguage{english}\paragraph{}In the context of the study and testing of wireless transmitters based on multiple radiating elements, operating in an array configuration (usually referred to as array transmitters), the aim of this work was to develop a transmitter element that would serve as the basic unit for creating array transmitters with arbitrary configurations. This basic unit would later be replicated by several identical units, which would then be spatially arranged as desired to form an array transmitter.
+         \paragraph{}The basic unit receives the analog I and Q signals at baseband, performing modulation of a carrier signal it receives from another input port. The modulated signal is pre-amplified by a driver and then further amplified by a power amplifier, which delivers the signal to an antenna designed for this purpose. Given that the goal of this unit is to serve as the foundation for creating array transmitters with beamsteering capabilities in multiple directions, an antenna with reduced directivity and a high bandwidth was designed. These requirements led to the design of a spiral antenna. To allow multiple units of this module to control the main radiation direction collectively when in an array transmitter, this basic unit has a phase shifter at the input of the I/Q modulator carrier, which allows varying the carrier phase through the application of an externally imposed control voltage signal. It was specified from the outset that this basic element should be capable of transmitting signals with a bandwidth on the order of 100 MHz, centered at a frequency of 2.4 GHz, and capable of radiating a peak power on the order of 10 W.
+         \paragraph{}Although the project and construction of this basic unit followed the specifications of its various components, there were issues with the operation of the I/Q modulator that were not properly resolved within the available time (with suspicion of a soldering problem in the mentioned modulator, as it is a very small integrated circuit). However, based on the tests conducted, it is believed that, apart from this issue (which requires a future solution), the remaining blocks of the developed prototype should be functional.}
+
+%%% Edit the Jury President information.
+%% First Member will be the President of the Jury
+\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Faculdade de Engenharia da Universidade do Porto}
+
+%%% Repeat the above declaration for additional
+%%%  members of the jury as many times as necessary.
+%% Additional members of the Jury
+\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Faculdade de Engenharia da Universidade do Porto}
+\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Faculdade de Engenharia da Universidade do Porto}
+\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Faculdade de Engenharia da Universidade do Porto}
+\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Faculdade de Engenharia da Universidade do Porto}
+\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Faculdade de Engenharia da Universidade do Porto}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%       DEFINE THESIS COVER FIELDS
+%%                  END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%% By default we consider portuguese to be the
+%%%  main language (the last one in the usepackage
+%%%  declaration). If you're writing your thesis
+%%%  in english uncomment the following line.
+%%% Set the proper language or you will end with incorrect hyphenation!
+\selectlanguage{english}
+
+
+\MakeCover
+\end{document}

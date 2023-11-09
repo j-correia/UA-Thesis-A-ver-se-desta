@@ -1,0 +1,18 @@
+\chapter{Conclusion}
+\label{chapter:conclusion}
+
+\par Throughout the duration of this project, the main goal was to design and implement a prototype for an element of a modular \ac{psa}. The idea was that this element could be replicated and organized in a side-by-side configuration. 
+
+\par The element should contain all the necessary components for its operation while having a limited number of connections to the outside.
+
+\par The prototype had a set of two \ac{pcb}s of small dimensions that could be placed inside a case that had the same height and width as the antenna that was designed. This requirement imposed restrictions on the design of the \ac{pcb}s and on the interconnections between boards and connectors, which were successfully met.
+
+\par The antenna that was designed proved to be difficult to replicate, as although the last one to be assembled had characteristics that respected the specifications, the first antenna produced was slightly below the desired specification. This experience highlighted the potential of the design, and now the significant effort and skill required to consistently replicate the antennas with similar characteristics is understood.
+
+\par A \ac{smps} was used in order to convert the $28\:\si{V}$ that were supplied to the element into the $3.3\:\si{V}$ that most of its internal components, with the exception of the \ac{pa}, used. It was crucial to deliver power to the element at the desired voltage.
+
+\par Although some issues related to the \ac{iq} Modulator arised, limiting the ability to verify the prototype's complete operation, a small amount of power could be measured at a frequency of $2.4\:\si{GHz}$ while testing. This signal, due to its low power, could have been leakage power from the \ac{iq} Modulator. This, combined with the fact that the \ac{i} and \ac{q} components of the modulator did not seem to produce any effect on the \ac{pa} output signal, meant that the prototype could not achieve the desired output power of $[5, 10] \:\si{W}$ nor modulate signals.
+
+\par After aquiring all components and assembling the \ac{pcb}s, the testing phase revealed additional areas for improvement, such as an oversight regarding the $-10\:\si{dB}$ of the \ac{iq} Modulator and the low output P1dB $17.6 \:\si{dBm}$ of the driver amplifier. These findings provide useful information for adjustments in the next prototype.
+
+\par This prototype, although not having met all initial requirements, was useful to better understand that a more careful approach to the choice of components for a new iteration of this prototype must be taken, particularly with regard to the adequacy of the \ac{ic} soldering requirements to the techniques available in the laboratory facilities. This work provides a valuable insight that can lead future iterations of the project to success.

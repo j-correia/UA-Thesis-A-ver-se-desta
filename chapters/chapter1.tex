@@ -1,0 +1,47 @@
+\chapter{Introduction}
+\label{chapter:introduction}
+
+
+\section{Introduction}
+\label{section:ch1_introduction}
+\par In wireless communications, the ability to transmit more information is a growing demand for almost all applications. Technologies from cellular and \ac{wlan} systems, to the more recent 5G technology, and \ac{mimo} systems greatly benefit from improvements to their throughput and bandwidth. There is also the inherent necessity of controlling the direction of the beam being radiated from the antenna for specific applications, as is the case that was discussed during this dissertation. This allows for systems that can focus their beam and power radiated on a specific target area, instead of spending power radiating energy over a large area like conventional antennas. Nowadays there is also a growing concern to optimize systems so that their power consumption is the lowest it can be.
+
+\par The solution that was studied and implemented during the course of this project is the usage of a matrix of small radiating elements. This array has the combined radiating power of the total vector sum of all the smaller radiating elements. This means that in certain places the interaction of their electromagnetic fields will be constructive, whilst on others it will be destructive.
+
+\par In order to control the places of interaction of these electromagnetic fields, it is mandatory to control the phase of each individual matrix element. As such a \ac{psa} is the most suitable solution. In these arrays, we have several small antennas that act as a single large one. Each of these small radiating elements has a phase shifter, mixer, amplifier and antenna, among other circuits. This allowed for an external controller to change the offsets of each radiating element in order to form a beam towards a specific orientation by adjusting the constructive and destructive interactions of the several elements in the array.
+
+\par The scope of this Master's Dissertation was to create a prototype for one element that can then be replicated into several others with a degree of accuracy and certainty to create a \ac{psa}.
+
+
+\section{Motivation}
+\label{section:ch1_motivation}
+
+\par This project idea was conceived, in scope and specifications, so that the knowledge acquired during the course of the degree could be applied in a more practical way, while at the same time developing an engineering prototype that could be used as a proof of concept for a configurable, open source, and highly versatile \ac{psa} system for the Instituto de Telecomunicações.
+
+\par While Instituto de Telecomunicações already owns a system capable of beam-forming, its closed source nature makes it immutable in configuration and does not allow any flexibility with respect to the way it can be assembled and rearranged.
+
+\par The various topics lectured with regard to \ac{pcb} design, power converters, mixers, \ac{rf} amplifiers, \ac{rf} components and antennas were applied and the opportunity allowed them to be applied in a more engineering-focused setting and thus expanded upon.
+
+
+\section{Specifications}
+\label{section:ch1_specifications}
+
+\par The initial specifications given for a single module are considered, as previously mentioned in \ref{section:ch1_motivation}, for a Master's Dissertation and are as follows.
+
+\begin{itemize} 
+    \item Occupy the smallest amount of space possible, while guaranteeing an appropriate geometry for a side-by-side mounting style in an array configuration;
+    \item Incorporate a \ac{rf} \ac{pa} with adequate characteristics, an antenna and study the possibility of adding an \ac{rf} isolator in between the \ac{pa} and the antenna;
+    \item A voltage controlled phase-shifter, that will be used by a controller in order to insert an adjustable offset on the phase of the carrier wave, as to configure the direction of the main beam to be radiated from the array;
+    \item To have and \ac{iq} modulator calibrated to operate at a given frequency range;
+    \item Each module will have to be simple to implement, with easily repeatable so that different replicas of the modules behave similarly to one another.
+\end{itemize}
+
+\par Furthermore other characteristics of the project were set as requirements.
+
+\begin{itemize}
+    \item The output power of the antenna should be in the range of $[5, 10]\:\si{W}$;
+    \item The operating frequency of the \ac{rf} signal must be in the range of $[2.4; 5] \:\si{GHz}$;
+    \item The \ac{iq} signals can have a bandwidth of up to $20 \:\si{MHz}$;
+    \item The power fed to each module must come from a $28 \:\si{V}$ power source;
+    \item The signal controlling the phase-sifter is in the range $[0, 28] \:\si{V}$.
+\end{itemize}
